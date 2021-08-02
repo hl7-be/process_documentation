@@ -27,8 +27,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: jekyllrb
 github_username:  jekyll
 
-domain: costateixeira.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://costateixeira.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+domain: hl7-be.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://hl7-be.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /process_documentation/      # place folder name if the site is served in a subfolder   
 
 
