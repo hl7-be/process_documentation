@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Documenting
+title: Documenting Transactions
 parent: Transactions
 grand_parent: Specifications
 nav_order: 47
