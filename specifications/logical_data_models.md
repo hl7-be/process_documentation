@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Data Specifications
+title: Logical Data Models
 parent: Data Specifications
+grand_parent: Specifications
 has_children: false
 nav_order: 252
 ---
