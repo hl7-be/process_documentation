@@ -6,7 +6,7 @@ grand_parent: Specifications
 nav_order: 47
 ---
 
-transactions are documented in 2 ways
+Transactions are documented in 2 ways
 
-1. conformance:
-2. defintiions:
+1. **Conformance**:
+2. **Definitions**:
