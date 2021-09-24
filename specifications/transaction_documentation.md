@@ -8,5 +8,5 @@ nav_order: 47
 
 Transactions are documented in 2 ways
 
-1. **Conformance**:
-2. **Definitions**:
+1. Conformance:
+2. Definitions:
