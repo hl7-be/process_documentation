@@ -6,3 +6,18 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 permalink: /
 ---
 This is a start page
+
+
+Regular **Markdown** here.
+
+{% plantuml %}
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: Another authentication Response
+@enduml
+{% endplantuml %}
+
+..............
