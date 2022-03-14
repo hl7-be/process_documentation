@@ -3,7 +3,7 @@ layout: default
 title: Server deployment
 parent: Deployment
 has_children: false
-nav_order: 319
+nav_order: 10
 ---
 
 Server

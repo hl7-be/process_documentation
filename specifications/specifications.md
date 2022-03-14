@@ -2,7 +2,7 @@
 layout: default
 title: Specifications
 has_children: true
-nav_order: 25
+nav_order: 20
 ---
 
 FHIR specifications define how the capabilities are implemented. There are several types of specifications:
