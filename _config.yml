@@ -1,31 +1,11 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: Process Documentation
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+#github_username:  jekyll
 
 domain: hl7-be.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://hl7-be.github.io  # the base hostname and protocol for your site, e.g. http://example.com
@@ -37,7 +17,10 @@ theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
-  - jekyll-diagrams
+  - jekyll-spaceship  
+
+
+search_enabled: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -63,3 +46,22 @@ plugins:
 # footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 
+
+
+
+#logo: "/assets/images/just-the-docs.png"
+aux_links:
+  "on GitHub":
+    - "//github.com/hl7-be/process_documentation"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+# Heading anchor links appear on hover over h1-h6 tags in page content allowing users to deep link to a particular heading on a page. true (default) or false
+heading_anchors: true
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/hl7-be/process_documentation" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
