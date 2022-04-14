@@ -5,16 +5,10 @@ title: Home
 # file name will be used as url, title will be used in menu and page title 
 --- 
 
-## Welcome to the documentation hub
+## HL7 Belgium process documentation
 
-A simple, ready-to-use template for adding documentation using github pages.
+This publication contains the processes used by HL7 Belgium in the definition and publication of HL7 FHIR standards in Belgium.  
+It contains the key artifacts, the roles, and the general way of working within the strict scope of HL7 Belgium working groups.
 
-Key features:
-* Editing done in github
-* Uses github pages and a github action to deploy the content to `<handle>.github.io/<repo>`  
-* Supports [markdown](https://markdown-tutorials.readthedocs.io/en/latest/gfm_cheat_sheet/) editing
-* Supports diagrams (written directly in the markdown): [PlantUML](https://plantuml.com), [Mermaid](https://mermaid-js.github.io/mermaid), others
-* Uses the [Just-the-docs Jekyll theme](https://pmarsceill.github.io/just-the-docs)
-  * Search functionality built in
-  * Hierarchical navigation with left-side menu
-  * Other features - feel free to discover
+This interfaces with other stakeholders that play a role in creating and publishing standards - namely eHealth, the Program Board B, the different federal working groups - Architecture and Structuring Elements, as well as the broad community. While those adjacent processes are identified here, this documentation does not represent those other processes - this documentation site maintains only the HL7 processes and technologies; all other processes are the responsibility of the respective owners, and are just identified here for a clear understanding of the collaboration.
+ 
