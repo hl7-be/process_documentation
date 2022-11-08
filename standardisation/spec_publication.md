@@ -28,7 +28,7 @@ hide footbox
 box "\nGitHub repositories\n"
   box "CI Repo" #FFE
     participant main
-    participant "gh-pages" as gh
+    participant "CI-build" as gh
     participant "release\ncandidate\n(release_candidate)" as relc
   end box
 
@@ -55,8 +55,7 @@ activate main
 main --> main : build
 main --> gh : deploy
 & note right of gh #cfc
-CI build is published on
-https://<org>.github.io/<repo>
+CI build is published
 end note
 end
 deactivate main
@@ -67,39 +66,43 @@ activate main
 main --> main : build
 main --> gh : deploy
 & note right of gh
-If build is successful, output will
-be automatically updated on
-https://<org>.github.io/<repo>
+If build is successful, CI build
+is automatically updated
 end note
 end 
 deactivate main
 
 ...
+...
 
 group Setup IG release
-User -> site: setup IG release folders
-User -> main: add package-list.json
+User -> site: setup IG release
+& note right of site
+webroot folder
+publish.ini
+org history templates
+end note
+'User -> main: add package-list.json
 end
 
-
 group Add a release
-User -> relc: create branch
-activate relc
-User -> relc: commit release info 
-relc -> relc: build
+User -> main: create publication-request.json
+relc -> relc: normal build
 
 group Prepare release site
-'User --> rels : trigger 
-relc -> rels: pull\ncandidate\nrelease
+relc -> rels: pull\nrelease\ncandidate
 activate rels
 hist --> rels : pull\nig-history\ntemplate 
 reg --> rels : pull\nig-registry 
 site --> rels: pull\ncurrent\nreleases 
 
-rels --> rels: build
+rels --> rels: go-publish
 end
 
 rels -> site : deploy
+...
+user -> rels : verify
+...
 rels -> relsite : deploy
 rels -> reg : (create\nPR)
 deactivate rels
