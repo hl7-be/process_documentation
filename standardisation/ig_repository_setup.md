@@ -26,6 +26,29 @@ gh label create "CareSet change" -R hl7-be/<repository> --description "Asks for 
 gh label create "release request" -R hl7-be/<repository> --description "Request for a release (publication) of this IG" --color 0E8A16
 ```
 
+## Change process
+
+Each change to an IG follows its issue through these steps, shown as the Status of the issue in the IG's project and by labels:
+
+| Step | Status / label | Who | Recorded as |
+|---|---|---|---|
+| Submitted, triaged | Inbox, then To do | editor | the issue |
+| Waiting for input | `waiting for info`, or `CareSet change` when the CareSet authors have to change the business document | business, CareSet authors | a comment |
+| Resolved, change required | label `resolved` | working group | a **resolution comment** on the issue: "WG dd/mm/yyyy: <resolution>". The resolution comment is authoritative. |
+| Resolved, no change | label `resolved`, issue closed as not planned | working group | a resolution comment |
+| Technical correction | label `Technical Correction` | editor | no working group decision needed: no change of meaning |
+| Applied before the decision | label `preapplied` | editor, then the working group confirms | the working group confirms with a resolution comment |
+| Applied | pull request marked **ready for review** | editor | the editor validates that the change does what the resolution says, then marks the draft pull request ready |
+| Published | the release pull request (`release-candidate` into the default branch) says `Closes #n`, and the issue closes | editor | the Release request issue |
+
+Rules:
+
+- A pull request stays a draft until its issue is `resolved`, or labelled `preapplied` or `Technical Correction`.
+- The editor validates the change against the resolution before marking the pull request ready; only ready pull requests are merged.
+- Every commit names its issue (`#n`). Every pull request names its issues: `Closes #n` when merging it fully resolves the issue, `Part of #n` otherwise.
+- Decisions are recorded as a resolution comment on the issue, with the date of the working group, not only in the minutes. There is no vote.
+- The working group agenda lists the issues to decide, with the link to each pull request's changes.
+
 ## Requesting a release
 
 A release of an IG is requested with a **Release request** issue in the IG repository (template `Release request`, label `release request`), one issue per release. It states:
